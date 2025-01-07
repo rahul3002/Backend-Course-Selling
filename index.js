@@ -1,13 +1,14 @@
 const express = require("express");
-const app = express();
+const mongoose = require("mongoose");
 const port =  5000;
+const {UserModel, AdminModel, CourseModel, PurchaseModel} = require("./Schema/db");
 const connectDb = require("./cofiguration/database");
 const adminRouter = require("./routes/admin");
 const userRouter = require("./routes/user");
 const courseRouter = require("./routes/courses");
+const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 app.use("/admin", adminRouter);
 app.use("/user", userRouter);
