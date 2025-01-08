@@ -7,9 +7,7 @@ const userSchema = new Schema({
     lastName: String,
     email: String,
     password: String
-
 })
-
 
 const adminSchema = new Schema({
     firstName : String,

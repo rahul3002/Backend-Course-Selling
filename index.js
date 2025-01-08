@@ -7,6 +7,7 @@ const adminRouter = require("./routes/admin");
 const userRouter = require("./routes/user");
 const courseRouter = require("./routes/courses");
 const app = express();
+require("dotenv").config();
 
 app.use(express.json());
 
